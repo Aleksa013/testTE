@@ -1,0 +1,6 @@
+:host {
+  margin: 0 auto;
+  width: clamp(414px, 100%, 1440px);
+  display: flex;
+  flex-direction: column;
+}

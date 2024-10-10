@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-blue: #1074cc;
+$primary-white: #ffffff;
+$text-black: #2a3033;
+$text-grey: #7f878c;
+$text-light-grey: #e1e4e6;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
