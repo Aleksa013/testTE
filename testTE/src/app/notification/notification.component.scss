@@ -1,0 +1,29 @@
+@import "./../../styles.scss";
+
+:host {
+  position: relative;
+  width: 2.5%;
+  display: flex;
+  align-items: flex-end;
+  .count {
+    position: absolute;
+    right: 6%;
+    top: -41%;
+    width: 16px;
+    padding: 2px;
+    text-align: center;
+    background-color: $primary-red;
+    color: $primary-white;
+    border: 1px solid $primary-blue;
+    border-radius: 100px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px;
+    letter-spacing: 0.011px;
+  }
+  .notification {
+    width: 25px;
+    height: 24px;
+  }
+}

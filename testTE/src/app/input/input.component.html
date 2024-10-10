@@ -1,1 +1,11 @@
-<p>input works!</p>
+<div class="wrapper">
+  @for(content of contents; track content.path){
+  <div class="item">
+    <img class="icon" [src]="content.path" alt="icon" />
+    <span class="text">{{ content.text }}</span>
+  </div>
+
+  }
+</div>
+<img src="/icons/search.png" alt="visits" />
+<img src="/icons/add2.png" alt="visits" />

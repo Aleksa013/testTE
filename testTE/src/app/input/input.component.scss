@@ -1,0 +1,30 @@
+@import "./../../styles.scss";
+:host {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 22%;
+  .wrapper {
+    margin-right: 7%;
+    display: flex;
+    width: 78%;
+    justify-content: space-between;
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 12%;
+      .icon {
+        width: 1.4em;
+      }
+      span {
+        color: $primary-white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0.035px;
+      }
+    }
+  }
+}
