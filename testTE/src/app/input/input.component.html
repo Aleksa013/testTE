@@ -12,7 +12,13 @@
 
 <ng-template #inputSearch>
   <div class="search__block">
-    <input type="text" placeholder="Поисковый запрос" (click)="showTab()" />
+    <input
+      type="text"
+      placeholder="Поисковый запрос"
+      (click)="showTab()"
+      [(ngModel)]="search"
+      (input)="getSearchString()"
+    />
     @if(isVisible){
     <app-tab></app-tab>
     }

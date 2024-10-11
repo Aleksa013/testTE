@@ -1,5 +1,5 @@
-<header (mousedown)="hideSearch($event)">
-  <img src="/images/logo.png" alt="logo" />
-  <app-input></app-input>
-  <app-user-info></app-user-info>
+<header (mousedown)="hideSearch($event)" class="makeInvisible">
+  <img src="/images/logo.png" alt="logo" class="makeInvisible" />
+  <app-input #input></app-input>
+  <app-user-info class="makeInvisible"></app-user-info>
 </header>

@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { InputComponent } from '../input/input.component';
 import { NotificationComponent } from '../notification/notification.component';
 import { UserInfoComponent } from '../user-info/user-info.component';
@@ -12,13 +12,10 @@ import { OpenInputService } from '../services/open-input.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(
-    private elementRef: ElementRef,
-    protected isOpenService: OpenInputService
-  ) {}
+  constructor(protected isOpenService: OpenInputService) {}
   public hideSearch(event: Event) {
-    console.log(event.target);
-    if (this.elementRef.nativeElement.querySelector('input') !== event.target) {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('makeInvisible')) {
       this.isOpenService.isOpen.next(false);
       console.log('work');
     }

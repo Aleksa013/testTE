@@ -1,8 +1,28 @@
-<input type="text" />
-<ng-container>
-  <input type="checkbox" *ngFor="let option of optionList" />
-</ng-container>
-<span>Только</span>
-<ng-container>
-  <input type="checkbox" *ngFor="let filter of filterList" />
-</ng-container>
+<form [formGroup]="settingsForm">
+  <div class="me">
+    <label for="name">Автор</label>
+    <input
+      id="name"
+      type="text"
+      placeholder="Имя или должность"
+      formControlName="author"
+    />
+  </div>
+  <div class="options">
+    @for( option of optionList; track $index){
+    <div class="option">
+      <input type="checkbox" [name]="option" [formControlName]="option" />
+      <label for="`${option}`"> {{ option }}</label>
+    </div>
+    }
+  </div>
+  <span>Только</span>
+  <div class="filters">
+    @for(filter of filterList; track $index) {
+    <div class="filter">
+      <input type="checkbox" [name]="filter" [formControlName]="filter" />
+      <label for="`${filter}`"> {{ filter }}</label>
+    </div>
+    }
+  </div>
+</form>

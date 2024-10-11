@@ -2,7 +2,7 @@
 
 :host {
   position: absolute;
-  width: 44em;
+  width: 43.7em;
   height: 14em;
   top: 105%;
   display: flex;
@@ -11,5 +11,5 @@
   border: 1px solid transparent;
   border-radius: 5px;
   background-color: $primary-white;
-  filter: drop-shadow(0 2em 2em $text-dark-grey);
+  filter: drop-shadow(0 0.2em 0.2em $text-dark-grey);
 }
