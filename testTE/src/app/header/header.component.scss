@@ -1,9 +1,12 @@
 @import "./../../styles.scss";
 :host {
-  padding: 0 1%;
-  width: 98%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $primary-blue;
+  width: 100%;
+  header {
+    padding: 0 1%;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary-blue;
+  }
 }

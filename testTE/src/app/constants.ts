@@ -15,11 +15,21 @@ const listOfInput = [
     path: '/icons/favorites.png',
     text: 'Избранное',
   },
-
   {
     path: '/icons/history.png',
     text: 'Посещение',
   },
 ];
 
-export { listOfInput };
+const historyList = [
+  'закрепить теги',
+  'кнопка',
+  'приложение',
+  'форма',
+  'текстовое поле',
+  'выпадающий список',
+];
+
+const optionList = ['Я участник', 'Строгий поиск', 'В заголовках'];
+const filterList = ['Теги', 'Просьбы', 'Контакты'];
+export { listOfInput, historyList, optionList, filterList };

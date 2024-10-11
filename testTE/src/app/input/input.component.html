@@ -1,11 +1,21 @@
-<div class="wrapper">
+<div class="wrapper" *ngIf="!isOpenInput; else inputSearch">
   @for(content of contents; track content.path){
   <div class="item">
     <img class="icon" [src]="content.path" alt="icon" />
     <span class="text">{{ content.text }}</span>
   </div>
-
   }
+  <button class="button--search" (click)="changeIsOpen()">
+    <img src="/icons/search.png" alt="visits" />
+  </button>
 </div>
-<img src="/icons/search.png" alt="visits" />
+
+<ng-template #inputSearch>
+  <div class="search__block">
+    <input type="text" placeholder="Поисковый запрос" (click)="showTab()" />
+    @if(isVisible){
+    <app-tab></app-tab>
+    }
+  </div>
+</ng-template>
 <img src="/icons/add2.png" alt="visits" />

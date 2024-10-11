@@ -2,13 +2,14 @@
 
 :host {
   position: relative;
-  width: 2.5%;
+  width: 17%;
   display: flex;
   align-items: flex-end;
+  margin: 0 23% 0 0;
   .count {
     position: absolute;
-    right: 6%;
-    top: -41%;
+    left: 35%;
+    bottom: 58%;
     width: 16px;
     padding: 2px;
     text-align: center;
@@ -22,7 +23,7 @@
     line-height: 14px;
     letter-spacing: 0.011px;
   }
-  .notification {
+  .icon {
     width: 25px;
     height: 24px;
   }
