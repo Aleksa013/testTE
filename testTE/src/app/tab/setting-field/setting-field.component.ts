@@ -18,8 +18,6 @@ export class SettingFieldComponent implements OnInit {
   ngOnInit(): void {
     this.settingsForm = this.FB.group({
       author: this.FB.control(''),
-      options: this.FB.group({}),
-      filters: this.FB.group({}),
     });
 
     this.optionList.forEach((option) => {

@@ -8,6 +8,6 @@ export class OpenInputService {
   public isOpen: BehaviorSubject<boolean>;
 
   constructor() {
-    this.isOpen = new BehaviorSubject(true);
+    this.isOpen = new BehaviorSubject(false);
   }
 }

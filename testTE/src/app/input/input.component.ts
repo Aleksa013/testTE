@@ -1,4 +1,10 @@
-import { Component, DestroyRef, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  ElementRef,
+  inject,
+  OnInit,
+} from '@angular/core';
 import * as constants from './../constants';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -16,11 +22,11 @@ import { TabComponent } from '../tab/tab.component';
 export class InputComponent implements OnInit {
   public search: string;
   public isOpenInput = false;
-  public isVisible = true;
+  public isVisible = false;
   public contents = constants.listOfInput;
   private destroyRef = inject(DestroyRef);
 
-  constructor(private isOpenService: OpenInputService) {
+  constructor(private isOpenService: OpenInputService, private el: ElementRef) {
     this.search = '';
   }
 
