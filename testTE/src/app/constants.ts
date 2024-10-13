@@ -1,22 +1,22 @@
 const listOfInput = [
   {
-    path: '/icons/link.png',
+    path: './icons/link.png',
     text: 'Ссылки',
   },
   {
-    path: '/icons/contacts.png',
+    path: './icons/contacts.png',
     text: 'Контакты',
   },
   {
-    path: '/icons/tag.png',
+    path: './icons/tag.png',
     text: 'Теги',
   },
   {
-    path: '/icons/favorites.png',
+    path: './icons/favorites.png',
     text: 'Избранное',
   },
   {
-    path: '/icons/history.png',
+    path: './icons/history.png',
     text: 'Посещение',
   },
 ];

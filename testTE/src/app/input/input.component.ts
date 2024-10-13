@@ -17,7 +17,7 @@ import { OpenSettingsService } from '../services/open-settings.service';
 export class InputComponent implements OnInit {
   public search: string;
   public isOpenInput = false;
-  public isVisible = true;
+  public isVisible = false;
   public contents = constants.listOfInput;
   private destroyRef = inject(DestroyRef);
 

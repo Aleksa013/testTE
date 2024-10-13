@@ -31,15 +31,15 @@
 
 :host {
   display: flex;
-  width: 53%;
+  width: clamp(800px, 53%, 1000px);
   align-items: center;
   justify-content: space-between;
   margin-right: 25%;
   .wrapper {
     position: relative;
-    margin: 0 0 0 5%;
+    margin: 0 0 0 7%;
     display: flex;
-    width: 95%;
+    width: clamp(600px, 90%, 1000px);
     .item {
       display: flex;
       align-items: center;
@@ -80,7 +80,7 @@
     left: -5%;
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: clamp(600px, 95%, 900px);
     height: 3em;
     input {
       padding: 0.1% 2%;
@@ -110,9 +110,11 @@
 
 @media screen and (930px >= width >620px) {
   :host {
+    width: clamp(500px, 85%, 900px);
     margin-right: 5%;
     .wrapper {
       flex-wrap: wrap;
+      justify-content: center;
       .item {
         gap: 8%;
         margin: 0 3.3% 0 0;
@@ -130,8 +132,8 @@
     }
     .search__block {
       top: 5%;
-      left: -10%;
-      width: 95%;
+      left: -5%;
+      width: clamp(550px, 100%, 900px);
     }
   }
 }

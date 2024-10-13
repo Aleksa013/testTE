@@ -8,6 +8,6 @@ export class OpenSettingsService {
   public isOpenSettings: BehaviorSubject<boolean>;
 
   constructor() {
-    this.isOpenSettings = new BehaviorSubject(true);
+    this.isOpenSettings = new BehaviorSubject(false);
   }
 }

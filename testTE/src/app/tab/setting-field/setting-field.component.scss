@@ -6,7 +6,7 @@
   form {
     margin: 0 auto;
     padding: 0% 5%;
-    width: 92%;
+    width: clamp(370px, 92%, 500px);
     height: inherit;
     display: flex;
     align-content: flex-start;
@@ -35,7 +35,7 @@
         height: 3.1em;
         border-radius: 3px;
         border: 1px solid $text-dark-grey;
-        background: url("/icons/Me.png") no-repeat 97% 46%;
+        background: url("./../../../../public/icons/Me.png") no-repeat 97% 46%;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -136,7 +136,7 @@
           border: 1px solid $bg-light-pink;
         }
         &:checked ~ .view:after {
-          content: url("/icons/icon.svg");
+          content: url("./../../../../public/icons/icon.svg");
           position: absolute;
           display: block;
         }
@@ -150,7 +150,7 @@
     width: 100%;
     form {
       padding: 1% 4%;
-      width: 92%;
+      width: clamp(350px, 92%, 500px);
       justify-content: flex-start;
       flex-direction: column;
       align-items: flex-start;
@@ -211,7 +211,7 @@
         align-items: flex-start;
         .filter {
           padding: 0 15%;
-          width: 100%;
+          width: 70%;
           align-items: start;
           margin: 0 0 8% 0;
           label {
@@ -244,7 +244,7 @@
         }
       }
       label input:checked ~ .view:after {
-        content: url("/icons/icon.svg");
+        content: url("./../../../../public/icons/icon.svg");
         position: absolute;
         display: block;
         border: 1px solid $bg-light-pink;

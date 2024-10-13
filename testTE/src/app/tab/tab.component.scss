@@ -13,10 +13,16 @@
   background-color: $primary-white;
   filter: drop-shadow(0 0.2em 0.2em $text-dark-grey);
 }
+
+@media screen and (930px >= width >620px) {
+  :host {
+    width: clamp(550px, 100%, 900px);
+  }
+}
 @media screen and (600px >= width >= 414px) {
   :host {
     width: 100vw;
-    height: 100vh;
+    height: clamp(450px, 100vh, 1400px);
     top: 110%;
     left: -17%;
   }
