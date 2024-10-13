@@ -40,3 +40,8 @@
     }
   }
 }
+@media screen and (600px >= width >= 414px) {
+  :host {
+    display: none;
+  }
+}

@@ -11,17 +11,23 @@
   <div class="options">
     @for( option of optionList; track $index){
     <div class="option">
-      <input type="checkbox" [name]="option" [formControlName]="option" />
-      <label for="`${option}`"> {{ option }}</label>
+      <label [for]="option">
+        {{ option }}
+        <input type="checkbox" [id]="option" [formControlName]="option" />
+        <span class="view"></span>
+      </label>
     </div>
     }
   </div>
-  <span>Только</span>
+  <legend>Только</legend>
   <div class="filters">
     @for(filter of filterList; track $index) {
     <div class="filter">
-      <input type="checkbox" [name]="filter" [formControlName]="filter" />
-      <label for="`${filter}`"> {{ filter }}</label>
+      <label [for]="filter">
+        {{ filter }}
+        <input type="checkbox" [id]="filter" [formControlName]="filter" />
+        <span class="view"></span>
+      </label>
     </div>
     }
   </div>

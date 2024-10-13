@@ -1,17 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { OpenSettingsService } from '../services/open-settings.service';
-import { CommonModule } from '@angular/common';
+import { OpenSettingsService } from '../../services/open-settings.service';
 
 @Component({
-  selector: 'app-notification',
+  selector: 'app-burger',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './notification.component.html',
-  styleUrl: './notification.component.scss',
+  templateUrl: './burger.component.html',
+  styleUrl: './burger.component.scss',
 })
-export class NotificationComponent implements OnInit {
-  public count = 32;
+export class BurgerComponent implements OnInit {
   public settingsOpen = false;
   private destroyRef = inject(DestroyRef);
 

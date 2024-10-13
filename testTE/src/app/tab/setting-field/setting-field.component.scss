@@ -13,7 +13,7 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     row-gap: 5%;
-    span {
+    legend {
       margin: 5% auto 0;
       width: 98%;
       color: black;
@@ -57,26 +57,40 @@
       }
     }
 
-    .options,
-    .filters {
-      width: 98%;
+    .view {
+      cursor: pointer;
+      position: absolute;
+      height: 1.1em;
+      width: 1.1em;
+      background-color: $primary-white;
+      border: 2px solid $text-dark-grey;
+      border-radius: 2px;
+    }
+
+    .options {
+      margin: 0.5% 0 0;
+      width: 89%;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      .option,
-      .filter {
+      .option {
         margin: 0;
-        width: inherit;
+        width: 29%;
         display: flex;
         align-items: center;
-        input {
-          margin: 0 12% 0 8%;
-          outline: 1px solid #7f878c;
-          width: 1.3em;
-          height: 1.3em;
-        }
         label {
-          font-size: 14px;
+          .view {
+            top: 1%;
+            left: -45%;
+          }
+        }
+        &:nth-of-type(2) {
+          label {
+            .view {
+              top: 1%;
+              left: -35%;
+            }
+          }
         }
         &:last-of-type {
           justify-content: flex-end;
@@ -84,11 +98,161 @@
       }
     }
     .filters {
-      width: 74%;
-      margin: 0 23% 0 0;
+      width: 71%;
+      margin: 0 18% 0 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
       .filter {
-        &:nth-of-type(2) {
+        width: 31%;
+        label {
+          .view {
+            top: -21%;
+            left: -35%;
+          }
+        }
+        &:last-of-type {
+          width: 30%;
+          text-align: end;
+          label {
+            .view {
+              top: -21%;
+              left: -4%;
+            }
+          }
+        }
+      }
+    }
+    label {
+      position: relative;
+      display: block;
+      font-size: 14px;
+      input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        &:checked ~ .view {
+          border: 1px solid $bg-light-pink;
+        }
+        &:checked ~ .view:after {
+          content: url("/icons/icon.svg");
+          position: absolute;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (600px >= width >= 414px) {
+  :host {
+    width: 100%;
+    form {
+      padding: 1% 4%;
+      width: 92%;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 0;
+      .me {
+        #name {
+          width: 92%;
+          margin: 5% auto 0%;
+        }
+      }
+      legend {
+        margin: 8.5% auto 4.5%;
+        width: 100%;
+      }
+      .options {
+        margin: 9% 0 0% 5%;
+        width: 58%;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        .option {
+          padding: 0 17%;
           width: 100%;
+          align-items: start;
+          margin: 0 0 12% 0;
+          label {
+            .view {
+              top: -17%;
+              left: -28%;
+            }
+          }
+          &:nth-of-type(2) {
+            label {
+              .view {
+                top: -3%;
+                left: -28%;
+              }
+            }
+          }
+          &:last-of-type {
+            justify-content: flex-start;
+            width: 100%;
+            margin: 0 0 2%;
+            label {
+              .view {
+                top: -3%;
+                left: -28%;
+              }
+            }
+          }
+        }
+      }
+      .filters {
+        width: 100%;
+        margin: 0;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        .filter {
+          padding: 0 15%;
+          width: 100%;
+          align-items: start;
+          margin: 0 0 8% 0;
+          label {
+            .view {
+              top: -8%;
+              left: -16%;
+            }
+          }
+          &:last-of-type {
+            width: 24%;
+            label {
+              .view {
+                top: -8%;
+                left: -68%;
+              }
+            }
+          }
+        }
+      }
+      label {
+        width: 65%;
+        .view {
+          top: -24%;
+          left: -27%;
+          width: 1.5em;
+          height: 1.5em;
+          background-color: $bg-light-pink;
+          border: 1px solid $bg-light-pink;
+          border-radius: 50%;
+        }
+      }
+      label input:checked ~ .view:after {
+        content: url("/icons/icon.svg");
+        position: absolute;
+        display: block;
+        border: 1px solid $bg-light-pink;
+      }
+      label {
+        .view:after {
+          left: 2px;
+          top: 4px;
         }
       }
     }

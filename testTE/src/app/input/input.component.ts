@@ -1,16 +1,11 @@
-import {
-  Component,
-  DestroyRef,
-  ElementRef,
-  inject,
-  OnInit,
-} from '@angular/core';
+import { Component, DestroyRef, inject, OnInit } from '@angular/core';
 import * as constants from './../constants';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { OpenInputService } from '../services/open-input.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TabComponent } from '../tab/tab.component';
+import { OpenSettingsService } from '../services/open-settings.service';
 
 @Component({
   selector: 'app-input',
@@ -22,11 +17,14 @@ import { TabComponent } from '../tab/tab.component';
 export class InputComponent implements OnInit {
   public search: string;
   public isOpenInput = false;
-  public isVisible = false;
+  public isVisible = true;
   public contents = constants.listOfInput;
   private destroyRef = inject(DestroyRef);
 
-  constructor(private isOpenService: OpenInputService, private el: ElementRef) {
+  constructor(
+    private isOpenService: OpenInputService,
+    private isOpenSettings: OpenSettingsService
+  ) {
     this.search = '';
   }
 
@@ -35,6 +33,9 @@ export class InputComponent implements OnInit {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((isOpen: boolean) => {
         this.isOpenInput = isOpen;
+        if (!isOpen) {
+          this.isVisible = false;
+        }
       });
   }
   public changeIsOpen() {
@@ -43,6 +44,7 @@ export class InputComponent implements OnInit {
 
   public showTab() {
     this.isVisible = true;
+    this.isOpenSettings.isOpenSettings.next(true);
   }
 
   public getSearchString() {

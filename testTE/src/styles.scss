@@ -1,6 +1,7 @@
 $primary-blue: #1074cc;
 $primary-red: #cc1910;
 $primary-white: #ffffff;
+$bg-light-pink: #f5f5f5;
 $text-black: #2a3033;
 $text-dark-grey: #7f878c;
 $text-grey: #9aa1a6;
@@ -10,6 +11,9 @@ html,
 body {
   height: 100%;
   box-sizing: border-box;
+}
+html::-webkit-scrollbar {
+  width: 0px;
 }
 body {
   margin: 0;

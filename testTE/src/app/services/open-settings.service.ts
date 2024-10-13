@@ -4,10 +4,10 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class OpenInputService {
-  public isOpen: BehaviorSubject<boolean>;
+export class OpenSettingsService {
+  public isOpenSettings: BehaviorSubject<boolean>;
 
   constructor() {
-    this.isOpen = new BehaviorSubject(true);
+    this.isOpenSettings = new BehaviorSubject(true);
   }
 }

@@ -1,0 +1,59 @@
+@import "./../../../styles.scss";
+
+@media screen and (550px >= width >= 414px) {
+  :host {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    margin: 0 1.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3px;
+    transition: 0.8s;
+    span {
+      position: absolute;
+      transition: 0.8s;
+      background-color: $primary-white;
+      height: 2px;
+      &:first-of-type {
+        transform: rotate(0deg);
+        width: 12px;
+        top: 15%;
+      }
+      &:nth-of-type(2) {
+        top: 38.5%;
+        left: 0%;
+        width: 12px;
+      }
+      &:last-of-type {
+        transform: rotate(0deg);
+        width: 12px;
+        top: 62%;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    .arrow {
+      position: absolute;
+      transition: 0.8s;
+      background-color: $text-black;
+      &:first-of-type {
+        transform: rotate(-45deg);
+        width: 10px;
+        top: 23%;
+      }
+      &:nth-of-type(2) {
+        top: 38.5%;
+        left: 22%;
+        width: 12px;
+      }
+      &:last-of-type {
+        transform: rotate(45deg);
+        width: 10px;
+        top: 52%;
+      }
+    }
+  }
+}

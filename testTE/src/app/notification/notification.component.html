@@ -1,2 +1,11 @@
-<div class="count">{{ count }}</div>
-<img src="/icons/notifications.png" alt="notification" class="icon" />
+<div
+  class="count makeInvisible"
+  [ngStyle]="settingsOpen ? { display: 'none' } : { display: 'block' }"
+>
+  {{ count }}
+</div>
+<img
+  src="/icons/notifications.png"
+  alt="notification"
+  class="icon makeInvisible"
+/>
