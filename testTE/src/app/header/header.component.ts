@@ -52,7 +52,6 @@ export class HeaderComponent implements OnInit {
         this.isOpenService.isOpen.next(false);
         this.isOpenSettings.isOpenSettings.next(false);
       }, 500);
-      console.log('work');
     }
   }
 }
